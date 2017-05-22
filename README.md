@@ -1,6 +1,7 @@
-#MQTT Android Client In this repo you will found a basic implementation of the MQTT client mqttjs(https://github.com/mqttjs/MQTT.js) for reporting and acting over many esp devices with both sensors and actuators. This project is intended to serve as a guide for feature mobile and spa implementations, and not as a final product himself.
+# MQTT #
+Android Client In this repo you will found a basic implementation of the MQTT client mqttjs(https://github.com/mqttjs/MQTT.js) for reporting and acting over many esp devices with both sensors and actuators. This project is intended to serve as a guide for feature mobile and spa implementations, and not as a final product himself.
 
-#Setup
+### Setup ###
 This project uses Ionic Framework, so if you don't have it already installed, go to  http://ionicframework.com/getting-started/.
 For building an apk you will also need to have the android sdk installed.
 `git clone git@github.com:JuanMsanchez/mqtt-android-client.git`
@@ -9,7 +10,7 @@ For building an apk you will also need to have the android sdk installed.
 `bower install`
 `ionic serve`
 
-##MQTT topic structure
+### MQTT topic structure ###
 
 The root topic is "users". /users
 
@@ -21,7 +22,7 @@ Each device has sensors, actuators or both, in the case of the sensors, will be 
 
 Each device actuator will be both listen and publishing to his alias(by default relay1, relay2) under the "actuator" domain. /user/alice/12601668/actuator/relay1
 
-##Device/Client communication protocol
+### Device/Client communication protocol ###
 
 Each request must include the basic authorization data (username and password).
 
@@ -33,7 +34,7 @@ The client will subscribe to the user parent topic listening for all published d
 
 The client will publish data to an actuator topic on every time a user requires it. /user/alice/12601668/actuator/relay1
 
-##Payload schema
+### Payload schema ###
 
 The sensors will publish data with this schema: { "value": float, "origin": string }
 

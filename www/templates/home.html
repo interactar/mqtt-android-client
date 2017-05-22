@@ -1,0 +1,26 @@
+<ion-view title="Home">
+    <ion-content padding="true" class="has-header">
+
+        <div class="box" ng-repeat="sensor in sensors">
+          <div id="{{sensor.id}}">
+            <i class="{{sensor.class}}"></i>
+            <div>
+              <span class="sensor-value">{{sensor.data.value}}</span><span>{{sensor.state}}</span>
+            </div>
+            <span class="box-footer sensor-origin">{{sensor.data.origin}}</span>
+          </div>
+        </div>
+
+
+        <div class="box" ng-repeat="actuator in actuators">
+          <div id="{{actuator.id}}" class="actuator-container" ng-click="setActuatorValue(actuator.id)">
+            <i class="{{actuator.class}} actuator-icon icon ion-power"></i>
+            <div>
+              <span class="actuator-state">{{actuator.state}}</span>
+            </div>
+            <span class="box-footer actuator-origin">{{actuator.data.origin}}</span>
+          </div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,5 @@
+{
+    "name": "egimobile",
+    "app_id": "a380defd",
+    "gulpStartupTasks": ["sass", "watch"]
+}

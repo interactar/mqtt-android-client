@@ -1,0 +1,23 @@
+<ion-view title="Login" hide-nav-bar="true" cache-view="false" nav-transition="none">
+  <ion-content padding="true" class=" manual-remove-top-padding" scroll="false">
+    <div id="login-markdown1" ng-if="error" class="show-list-numbers-and-dots error-box">
+      <p style="color:#000000;">{{error}}</p>
+    </div>
+    <form id="login-form1" class="list center-form">
+
+      <ion-list id="login-list2">
+
+        <label class="item item-input top-input" id="login-input1">
+          <input type="text" placeholder="Username" ng-model="data.username">
+        </label>
+
+        <label class="item item-input bottom-input" id="login-input2">
+          <input type="password" placeholder="Password" ng-model="data.password">
+        </label>
+
+      </ion-list>
+      
+      <button id="login-button1" ng-click="login('basic')" class="button button-stable button-block basic-login">Log In</button>
+    </form>
+  </ion-content>
+</ion-view>

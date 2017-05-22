@@ -1,0 +1,12 @@
+{
+    "name": "EGI Mobile",
+    "short_name": "EGI MobiLE",
+    "start_url": "index.html",
+    "display": "standalone",
+    "icons": [{
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+  }]
+}
+
